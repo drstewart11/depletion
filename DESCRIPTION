@@ -1,0 +1,13 @@
+Package: depletion
+Title: Hierarchical Bayesian Removal Models for Stream Data
+Version: 0.1.0
+Authors@R: 
+    person("David", "Stewart", , "david_stewart@fws.gov", role = c("aut", "cre"))
+Description: A collection of JAGS-based Bayesian removal models tailored to stream data. The package estimates species abundance and trends by incorporating habitat and detection covariates.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Depends: R (>= 4.0.0)
+Imports: dplyr, tidyr, ggplot2, jagsUI, coda
+RoxygenNote: 7.2.1
