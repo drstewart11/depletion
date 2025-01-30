@@ -75,16 +75,14 @@ abundance_removal_model <- function(count, output_dir){
     for(t in 1:nyears){
       latent.g[i, t] ~ dunif(1,npasses)
       g[i, t] <- round(latent.g[i, t])
-      for(j in 1:npasses){
-      p[i, j, t] ~ dbeta(1, 1)
-    }
+      p[i, t] ~ dbeta(1, 1)
     }
   }
 
   for(i in 1:nsites){
     for(t in 1:nyears){
       for(j in 1:npasses){
-        q[i, j, t] <- 1 - pow((1-p[i, j, t]), 1/g[i, t])
+        q[i, j, t] <- 1 - pow((1-p[i, t]), 1/g[i, t])
         #q[i, j, t] ~ dbeta(1, 1)
       }
     }
