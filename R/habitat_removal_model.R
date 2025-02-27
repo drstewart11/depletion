@@ -934,7 +934,7 @@ for (i in 1:nsites) {
   p2_Y <- yAGCH[1:nsites,2,1:nyears]
   p3_Y <- yAGCH[1:nsites,3,1:nyears]
   p4_Y <- yAGCH[1:nsites,4,1:nyears]
-  p5_Y <- yGIPU[1:nsites,5,1:nyears]
+  p5_Y <- yAGCH[1:nsites,5,1:nyears]
 
 
   for (i in 1:nsites) {
